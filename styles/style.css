@@ -5,12 +5,15 @@
   font-family: "Roboto", sans-serif;
   font-size: 16px;
 }
-
+body {
+  max-width: 1512px;
+  margin: 0 auto;
+}
 /***** -- Header Section -- *****/
 header {
   display: flex;
   justify-content: space-between;
-  padding: 16px 32px;
+  padding: 16px 24px;
   height: 64px;
 }
 
@@ -25,7 +28,7 @@ header {
   height: 34px;
   background: none;
   border: none;
-  margin-right: 20px;
+  margin-right: 40px;
 }
 
 .search-bar {
@@ -107,7 +110,7 @@ header {
 /* ******************************************************* */
 /***** -- Main Section -- *****/
 main {
-  border: 1px solid blue;
+  border: 1px solid grey;    
   max-width: 1196px;
   margin: 0px auto;
 }
@@ -152,3 +155,44 @@ h1 {
   margin: 0 auto;
 }
 
+/* ------Events Near-------- */
+.EventsNear-section {
+ border: 1px solid blue; 
+}
+
+.EventsNear-heading-search-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+.EventsNear-heading-search-bar h2 {
+  font-size: 28px;
+  font-weight: 600;
+  width: 160px;
+}
+.EventsNear-search-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 8px 8px 12px;
+  color: rgba(0, 121, 138, 1);
+  background-color: rgba(151, 202, 209, 0.12);
+  border-radius: 0.5rem;
+}
+.EventsNear-location-input {
+  color: rgba(0, 121, 138, 1);
+  background-color: rgba(151, 202, 209, 0);
+  font-size: 20px;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.5rem;
+  width: 186px;
+}
+.EventsNear-edit-btn {
+  width: 22px;
+  height: 22px;
+  border: none;
+  color: rgba(0, 121, 138, 1);
+  background-color: rgba(151, 202, 209, 0);
+}
