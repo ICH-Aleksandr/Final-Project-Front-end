@@ -172,20 +172,34 @@ h1 {
 }
 
 /* ------Events Near-------- */
-.EventsNear-section {
+.EventsNear-section,
+.OnlineEvents-section {
   border: 1px solid blue;
 }
 
-.EventsNear-heading-search-bar {
+.EventsNear-header,
+.OnlineEvents-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.EventsNear-heading-search-bar,
+.OnlineEvents-heading-search-bar {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 8px;
 }
 
-.EventsNear-heading-search-bar h2 {
+.EventsNear-heading-search-bar h2,
+.OnlineEvents-heading-search-bar h2 {
   font-size: 28px;
   font-weight: 600;
+}
+
+.EventsNear-heading-search-bar h2 {
   width: 160px;
 }
 
@@ -215,4 +229,11 @@ h1 {
   border: none;
   color: rgb(0, 121, 138);
   background-color: rgba(151, 202, 209, 0);
-}/*# sourceMappingURL=style.css.map */
+}
+
+.see-events-link {
+  color: #00798a;
+  font-weight: 500;
+}
+
+/* ------Events Near-------- *//*# sourceMappingURL=style.css.map */

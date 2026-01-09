@@ -1,6 +1,6 @@
 /***** -- Main Section -- *****/
 main {
-  border: 1px solid grey;    
+  border: 1px solid grey;
   max-width: 1196px;
   margin: 0px auto;
 }
@@ -14,7 +14,7 @@ main {
   padding: 68px 0px;
 }
 .heading-data {
- max-width: 608px;
+  max-width: 608px;
   flex-grow: 1;
 }
 h1 {
@@ -53,19 +53,31 @@ h1 {
 }
 
 /* ------Events Near-------- */
-.EventsNear-section {
- border: 1px solid blue; 
+.EventsNear-section,
+.OnlineEvents-section {
+  border: 1px solid blue;
 }
 
-.EventsNear-heading-search-bar {
+.EventsNear-header,
+.OnlineEvents-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.EventsNear-heading-search-bar,
+.OnlineEvents-heading-search-bar {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 8px;
 }
-.EventsNear-heading-search-bar h2 {
+.EventsNear-heading-search-bar h2,
+.OnlineEvents-heading-search-bar h2 {
   font-size: 28px;
   font-weight: 600;
+}
+.EventsNear-heading-search-bar h2 {
   width: 160px;
 }
 .EventsNear-search-bar {
@@ -93,3 +105,9 @@ h1 {
   color: rgba(0, 121, 138, 1);
   background-color: rgba(151, 202, 209, 0);
 }
+.see-events-link {
+  color: #00798a;
+  font-weight: 500;
+}
+
+/* ------Events Near-------- */
