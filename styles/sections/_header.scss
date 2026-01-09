@@ -1,0 +1,97 @@
+/***** -- Header Section -- *****/
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 24px;
+  height: 64px;
+}
+
+/* ------headerFlex-------- */
+.headerFlex {
+  display: flex;
+  align-items: center;
+  width: 750px;
+}
+
+.logo-btn {
+  height: 34px;
+  background: none;
+  border: none;
+  margin-right: 40px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  height: 42px;
+  border: 1px solid #ddd;
+  border-radius: 0.4rem 0 0 0.4rem;
+  border-right: none;
+  overflow: hidden;
+  background-color: #fff;
+  flex-grow: 1;
+}
+
+.search-input,
+.location-input {
+  height: 100%;
+  border: none;
+  padding: 0 12px;
+  font-weight: regular;
+  outline: none;
+}
+
+.search-input {
+  flex: 1;
+  padding-left: 40px;
+  background-image: url(../assets/icons/search1.png);
+  background-repeat: no-repeat;
+  background-position: 0.5rem center;
+  background-size: 1.3rem;
+}
+
+.location-input {
+  width: 254px;
+  border-left: 1px solid #e0e0e0;
+}
+
+.search-button {
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 0 0.4rem 0.4rem 0;
+  background-color: rgba(246, 88, 88, 1);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-button:hover {
+  background-color: #e04345;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 24;
+}
+
+/* ------headerMenu-------- */
+.headerMenu {
+  font-size: medium;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.headerMenu > a {
+  text-decoration: none;
+  color: black;
+}
+.headerMenu > input {
+  color: white;
+  background-color: rgba(0, 121, 138, 1);
+  border-radius: 8px;
+  width: 83px;
+  height: 36px;
+  border: none;
+}

@@ -1,0 +1,88 @@
+/***** -- Main Section -- *****/
+main {
+  border: 1px solid grey;    
+  max-width: 1196px;
+  margin: 0px auto;
+}
+
+/* ------heading-------- */
+.heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 68px 0px;
+}
+.heading-data {
+ max-width: 608px;
+  flex-grow: 1;
+}
+h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  line-height: 52px;
+}
+.heading-data p {
+  margin-bottom: 24px;
+  line-height: 24px;
+}
+.Join-Meetup-btn {
+  background-color: rgba(0, 121, 138, 100);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  width: 125px;
+  height: 40px;
+  cursor: pointer;
+}
+.heading-img {
+  flex-grow: 1;
+}
+
+.heading-img img {
+  display: block;
+  margin: 0 auto;
+}
+
+/* ------Events Near-------- */
+.EventsNear-section {
+ border: 1px solid blue; 
+}
+
+.EventsNear-heading-search-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+.EventsNear-heading-search-bar h2 {
+  font-size: 28px;
+  font-weight: 600;
+  width: 160px;
+}
+.EventsNear-search-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 8px 8px 12px;
+  color: rgba(0, 121, 138, 1);
+  background-color: rgba(151, 202, 209, 0.12);
+  border-radius: 0.5rem;
+}
+.EventsNear-location-input {
+  color: rgba(0, 121, 138, 1);
+  background-color: rgba(151, 202, 209, 0);
+  font-size: 20px;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.5rem;
+  width: 186px;
+}
+.EventsNear-edit-btn {
+  width: 22px;
+  height: 22px;
+  border: none;
+  color: rgba(0, 121, 138, 1);
+  background-color: rgba(151, 202, 209, 0);
+}
