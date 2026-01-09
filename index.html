@@ -21,7 +21,7 @@
 
   <body>
     <div class="container">
-      <!-- -------Header Section------- -->
+      <!-- -------Header------- -->
       <header>
         <div class="headerFlex">
           <div class="logo-btn">
@@ -57,9 +57,9 @@
         </div>
       </header>
 
-      <!-- -------Main Section------- -->
+      <!-- -------Main------- -->
       <main>
-        <!-- Heading Section -->
+        <!-- ===== Heading Section ===== -->
         <div class="heading">
           <div class="heading-data">
             <h1>The people platform—Where interests become friendships</h1>
@@ -78,61 +78,66 @@
           </div>
         </div>
 
-        <!-- Events Near Section -->
-        <div class="EventsNear-section">
-          <div class="EventsNear-header">
-            <div class="EventsNear-heading-search-bar">
-              <h2>Events near</h2>
-              <div class="EventsNear-search-bar">
-                <input
-                  type="text"
-                  class="EventsNear-location-input"
-                  value="Mountain View, CA"
-                />
+        <!-- -------Events Section------- -->
+        <section class="events">
+          <!-- ===== Events Near Section ===== -->
+          <div class="EventsNear-section">
+            <div class="EventsNear-header">
+              <div class="EventsNear-heading-search-bar">
+                <h2>Events near</h2>
+                <div class="EventsNear-search-bar">
+                  <input
+                    type="text"
+                    class="EventsNear-location-input"
+                    value="Mountain View, CA"
+                  />
 
-                <button class="EventsNear-edit-btn">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="22"
-                    height="22"
-                    viewBox="0 0 22 22"
-                    fill="none"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M13.501 3.12975C14.2169 2.41378 15.3777 2.41378 16.0937 3.12975L17.39 4.4261C18.1061 5.14207 18.1061 6.30287 17.39 7.01883L16.0937 8.31519L12.2046 4.4261L13.501 3.12975ZM11.5564 5.07427L15.4454 8.96336L7.93577 16.4731C7.76386 16.6449 7.53071 16.7415 7.28759 16.7415H4.23654C3.9834 16.7415 3.7782 16.5363 3.7782 16.2832V13.2322C3.7782 12.989 3.87477 12.7559 4.04668 12.584L11.5564 5.07427ZM4.35449 17.875C3.9748 17.875 3.66699 18.1828 3.66699 18.5625C3.66699 18.9423 3.9748 19.25 4.35449 19.25H17.6462C18.0258 19.25 18.3337 18.9423 18.3337 18.5625C18.3337 18.1828 18.0258 17.875 17.6462 17.875H4.35449Z"
-                      fill="#00798A"
-                    />
-                  </svg>
-                </button>
+                  <button class="EventsNear-edit-btn">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="22"
+                      height="22"
+                      viewBox="0 0 22 22"
+                      fill="none"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M13.501 3.12975C14.2169 2.41378 15.3777 2.41378 16.0937 3.12975L17.39 4.4261C18.1061 5.14207 18.1061 6.30287 17.39 7.01883L16.0937 8.31519L12.2046 4.4261L13.501 3.12975ZM11.5564 5.07427L15.4454 8.96336L7.93577 16.4731C7.76386 16.6449 7.53071 16.7415 7.28759 16.7415H4.23654C3.9834 16.7415 3.7782 16.5363 3.7782 16.2832V13.2322C3.7782 12.989 3.87477 12.7559 4.04668 12.584L11.5564 5.07427ZM4.35449 17.875C3.9748 17.875 3.66699 18.1828 3.66699 18.5625C3.66699 18.9423 3.9748 19.25 4.35449 19.25H17.6462C18.0258 19.25 18.3337 18.9423 18.3337 18.5625C18.3337 18.1828 18.0258 17.875 17.6462 17.875H4.35449Z"
+                        fill="#00798A"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="EventsNear-heading-search-bar__right">
+                <a href="#" class="see-events-link">See all events</a>
               </div>
             </div>
-            <div class="EventsNear-heading-search-bar__right">
-              <a href="#" class="see-events-link">See all events</a>
+
+            <div class="EventsNear-cards" id="events-near-cards">
+              <!-- Cards will be dynamically inserted here -->
             </div>
           </div>
 
-          <div class="EventsNear-cards" id="events-near-cards">
-            <!-- Cards will be dynamically inserted here -->
-          </div>
-        </div>
-
-        <!-- Upcoming online events Section-->
-        <div class="OnlineEvents-section">
-          <div class="OnlineEvents-header">
-            <div class="OnlineEvents-heading-search-bar">
-              <h2>Upcoming online events</h2>
+          <!-- ===== Upcoming online events Section ===== -->
+          <div class="OnlineEvents-section">
+            <div class="OnlineEvents-header">
+              <div class="OnlineEvents-heading-search-bar">
+                <h2>Upcoming online events</h2>
+              </div>
+              <div class="OnlineEvents-heading-search-bar__right">
+                <a href="#" class="see-events-link">See all events</a>
+              </div>
             </div>
-            <div class="OnlineEvents-heading-search-bar__right">
-              <a href="#" class="see-events-link">See all events</a>
+
+            <div class="OnlineEvents-cards" id="online-events-cards">
+              <!-- Cards will be dynamically inserted here -->
             </div>
           </div>
-
-          <div class="OnlineEvents-cards" id="online-events-cards">
-            <!-- Cards will be dynamically inserted here -->
-          </div>
-        </div>
+        </section>
+        
+        <!-- ===== Join Meetup ===== -->
       </main>
     </div>
   </body>
