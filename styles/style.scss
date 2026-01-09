@@ -1,16 +1,6 @@
+@use "./global";
 @use "./variables/mixins";
 @use "./sections/footer";
 @use "./sections/header";
 @use "./sections/main";
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-}
-body {
-  max-width: 1512px;
-  margin: 0 auto;
-}

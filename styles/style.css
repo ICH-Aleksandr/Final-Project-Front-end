@@ -1,3 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+body {
+  max-width: 1512px;
+  margin: 0 auto;
+}
+
 /***** -- Header Section -- *****/
 header {
   display: flex;
@@ -194,17 +207,4 @@ h1 {
   border: none;
   color: rgb(0, 121, 138);
   background-color: rgba(151, 202, 209, 0);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-}
-
-body {
-  max-width: 1512px;
-  margin: 0 auto;
 }/*# sourceMappingURL=style.css.map */
