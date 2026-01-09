@@ -29,13 +29,20 @@ h1 {
 }
 .Join-Meetup-btn {
   background-color: rgba(0, 121, 138, 100);
-  color: white;
-  border: none;
   border-radius: 8px;
   width: 125px;
   height: 40px;
   cursor: pointer;
 }
+.Join-Meetup-btn a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: white;
+  text-decoration: none;
+}
+
 .heading-img {
   flex-grow: 1;
 }
