@@ -1,0 +1,46 @@
+/* ------heading-------- */
+.heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 68px;
+}
+.heading-data {
+  max-width: 608px;
+  flex-grow: 1;
+}
+h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  line-height: 52px;
+}
+.heading-data p {
+  margin-bottom: 24px;
+  line-height: 24px;
+}
+.Join-Meetup-btn {
+  background-color: rgba(0, 121, 138, 100);
+  border-radius: 8px;
+  width: 125px;
+  height: 40px;
+  cursor: pointer;
+}
+.Join-Meetup-btn a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: white;
+  text-decoration: none;
+}
+
+.heading-img {
+  flex-grow: 1;
+}
+
+.heading-img img {
+  display: block;
+  margin: 0 auto;
+}

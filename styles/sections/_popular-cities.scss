@@ -1,0 +1,27 @@
+.section p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+.cities {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 22px;
+  margin-top: 24px;
+}
+
+.city {
+  text-align: center;
+}
+.city img {
+  width: 205px;
+  height: 205px;
+  margin: 0 auto 10px;
+  border-radius: 999px;
+  object-fit: cover;
+}
+.city span {
+  font-weight: 500;
+}

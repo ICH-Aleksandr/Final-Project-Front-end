@@ -1,0 +1,41 @@
+.join-meetup-inner {
+  background-color: rgba(151, 202, 209, 0.08);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  padding: 24px 56px;
+}
+
+.join-meetup-content {
+  max-width: 739px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.join-meetup-image {
+  flex-shrink: 0;
+}
+
+.join-meetup__image img {
+  max-width: 340px;
+  height: auto;
+  display: block;
+}
+
+.join-meet-up-btn {
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 190px;
+  background-color: #e32359;
+  border: 1px solid #e32359;
+  color: #fff;
+}
+
+.join-meet-up-btn:hover {
+  background-color: #cf2253;
+}
