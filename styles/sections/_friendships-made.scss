@@ -1,58 +1,42 @@
-.how {
+.subtext {
+  margin: 8px 0 16px;
+  color: #6b7280;
+  max-width: 90ch;
+  line-height: 1.55;
+}
+
+.posts {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
   margin-top: 24px;
 }
 
-.howCard {
-  background: #eef6f7;
-  border-radius: 16px;
-  padding: 28px;
-  display: flex;
-  gap: 14px;
-  align-items: flex-start;
+.post img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 14px;
 }
 
-.howIconWrap {
-  width: 42px;
-  height: 42px;
-  border-radius: 12px;
-  background: #e7f2f3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex: 0 0 auto;
-}
-
-.howIconWrap img {
-  width: 41px;
-  height: 41px;
-}
-
-.howCard {
-  align-items: flex-start;
-}
-
-.howCard h3,
-.howCard p,
-.howCard a {
-  max-width: 310px;
-}
-.howCard h3 {
-  margin: 0 0 6px;
+.post h3 {
+  margin: 10px 0 6px;
   font-size: 16px;
+  line-height: 1.25;
 }
 
-.howCard p {
+.post p {
   margin: 0 0 10px;
   color: #6b7280;
-  line-height: 1.45;
   font-size: 14px;
+  line-height: 1.5;
 }
 
-.howCard a {
+.post a {
   color: #0f766e;
   font-weight: 500;
   font-size: 14px;
+}
+.post a:hover {
+  text-decoration: underline;
 }

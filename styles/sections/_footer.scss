@@ -1,0 +1,128 @@
+/***** -- Footer -- *****/
+
+.footer-container {
+  max-width: 1196px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.footer {
+  margin-top: 28px;
+  background: #07080b;
+  color: #e5e7eb;
+}
+
+.footer__cta {
+  padding: 28px 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-bottom: 1px solid rgba(240, 234, 234, 0.12);
+  font-weight: 500;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.btn-outline:hover {
+  border-color: #fff;
+}
+
+.footer__cta .btn-outline {
+  margin-left: 0;
+  padding: 8px 14px;
+  font-size: 14px;
+  border-radius: 6px;
+}
+
+.footer__cols {
+  padding: 32px 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(180px, 1fr));
+  gap: 32px;
+  border-bottom: 0;
+}
+
+.footerCol h4 {
+  margin: 0 0 12px;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(246, 247, 248, 1);
+}
+
+.footerCol a {
+  display: block;
+  width: fit-content;
+  margin: 0 0 10px;
+  font-size: 13px;
+  color: rgba(197, 196, 196, 1);
+}
+
+.footerCol a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.footer__bottomRow {
+  padding: 24px 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.footerSmallTitle {
+  font-size: 12px;
+  color: rgba(229, 231, 235, 0.8);
+  margin-bottom: 10px;
+}
+
+.footer__socials {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.footer__socials img {
+  width: 20px;
+  height: 20px;
+  opacity: 0.9;
+}
+.footer__socials img:hover {
+  opacity: 1;
+}
+
+.footer__apps {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.footer__apps img {
+  height: 38px;
+}
+
+.footer__legal {
+  padding: 18px 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: rgba(229, 231, 235, 0.8);
+  border-top: 0;
+}
+.footer__legal a {
+  color: rgba(229, 231, 235, 0.8);
+  white-space: nowrap;
+}
+.footer__legal a:hover {
+  color: #fff;
+  text-decoration: underline;
+}

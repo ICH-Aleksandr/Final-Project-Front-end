@@ -1,0 +1,58 @@
+.how {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.howCard {
+  background: #eef6f7;
+  border-radius: 16px;
+  padding: 28px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.howIconWrap {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: #e7f2f3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+.howIconWrap img {
+  width: 41px;
+  height: 41px;
+}
+
+.howCard {
+  align-items: flex-start;
+}
+
+.howCard h3,
+.howCard p,
+.howCard a {
+  max-width: 310px;
+}
+.howCard h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+}
+
+.howCard p {
+  margin: 0 0 10px;
+  color: #6b7280;
+  line-height: 1.45;
+  font-size: 14px;
+}
+
+.howCard a {
+  color: #0f766e;
+  font-weight: 500;
+  font-size: 14px;
+}
