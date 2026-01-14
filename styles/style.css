@@ -461,6 +461,7 @@ h1 {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 28px;
 }
 
 .EventsNear-heading-search-bar,
@@ -508,10 +509,120 @@ h1 {
   font-weight: 500;
 }
 
+/* ------------------------------------- */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  -moz-column-gap: 24px;
+       column-gap: 24px;
+  row-gap: 70px;
+}
+
+.event-card__title,
+.event-card__meta,
+.event-card__text {
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+.event-card__content {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.event-card__title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #111827;
+}
+
+.event-card__meta {
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.event-card--grid .event-card__date {
+  font-size: 14px;
+  line-height: 1.2;
+  color: #212121;
+}
+
+.event-card--grid .event-card__content {
+  width: 100%;
+  max-width: 256px;
+}
+
+.event-card--grid {
+  max-width: 272px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.event-card--grid .event-card__img {
+  width: 100%;
+  height: 153px;
+  border-radius: 12px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.event-card--grid .event-card__row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #111827;
+}
+
+.event-card--grid .event-card__icon {
+  width: 18px;
+  height: 18px;
+  opacity: 0.85;
+  flex: 0 0 auto;
+}
+
+.event-card--grid .event-card__text {
+  line-height: 1.2;
+  font-size: 16px;
+}
+
+.event-card--list {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 16px;
+  padding: 10px 0 50px;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 24px;
+}
+
+.event-card--list .event-card__img {
+  width: 160px;
+  height: 90px;
+  border-radius: 12px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* ------------------------------------- */
+@media (max-width: 1024px) {
+  .events-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 @media (max-width: 768px) {
   .EventsNear-heading-search-bar__right,
   .OnlineEvents-heading-search-bar__right {
     display: none;
+  }
+  .events-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 480px) {
@@ -521,6 +632,61 @@ h1 {
   }
   .EventsNear-heading-search-bar h2 {
     width: 110px;
+  }
+  .event-card__date {
+    font-size: 10px;
+  }
+  .events-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+    padding-bottom: 28px;
+  }
+  .event-card--grid {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 12px;
+    padding-bottom: 14px;
+    margin-bottom: 14px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  .events-grid .event-card--grid:first-child {
+    border-top: 1px solid #e5e7eb;
+    padding-top: 14px;
+  }
+  .events-grid .event-card--grid:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  .event-card--grid .event-card__img {
+    width: 95px;
+    height: 54px;
+    border-radius: 8px;
+    flex: 0 0 auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .event-card--grid .event-card__content {
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: none;
+  }
+  .event-card--grid .event-card__title,
+  .event-card--grid .event-card__meta,
+  .event-card--grid .event-card__text {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+  .event-card__title {
+    font-size: 12px;
+  }
+  .event-card--grid .event-card__text {
+    font-size: 10px;
+  }
+  .event-card--grid .event-card__icon {
+    display: none;
   }
 }
 .join-meetup-inner {

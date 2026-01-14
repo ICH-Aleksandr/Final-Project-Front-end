@@ -1,101 +1,161 @@
-console.log("**********");
+const icons = {
+  calendar: "./assets/icons/calendar.svg",
+  check: "./assets/icons/check_mark.svg",
+  vector: "./assets/icons/vector.svg",
+};
 
-const eventsStore = [
+const eventsNear = [
   {
-    title: "INFJ Personality Type - Coffee Shop Meet & Greet",
-    description: "Being an INFJ",
-    date: new Date(2024, 2, 23, 15),
-    image:
-      "https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=1037&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D%201037w ",
-    type: "offline",
-    attendees: 99,
-    category: "Hobbies and Passions",
-    distance: 50,
+    title: "Day Trading Idea and Strategy",
+    category: "Business (5 km)",
+    date: "MON, MAR 18 · 7:00 PM PDT",
+    going: "1 going",
+    price: "Free",
+    type: "In-person event",
+    image: "./assets/cards/event_placeholder.png",
+  },
+  {
+    title: "Let's Talk Networking: JPMorgan Chase in Palo Alto",
+    category: "Business (25 km)",
+    date: "TUE, MAR 19 · 5:00 PM PDT",
+    going: "41 going",
+    price: "Free",
+    type: "In-person event",
+    image: "./assets/cards/event_placeholder.png",
   },
   {
     title:
-      "NYC AI Users - AI Tech Talks, Demo & Social: RAG Search and Customer Experience",
-    description: "New York AI Users",
-    date: new Date(2024, 2, 23, 11, 30),
-    image:
-      "https://images.unsplash.com/photo-1696258686454-60082b2c33e2?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D ",
-    type: "offline",
-    attendees: 43,
+      "Tech Talks & Quiz: Next-Gen Database Solutions for Emerging Use Cases",
     category: "Technology",
-    distance: 25,
+    date: "WED, MAR 13 · 6:00 PM PDT",
+    going: "40 going",
+    price: "Free",
+    type: "Online event",
+    image: "./assets/cards/event_placeholder.png",
   },
   {
-    title: "Book 40+ Appointments Per Month Using AI and Automation",
-    description: "New Jersey Business Network",
-    date: new Date(2024, 2, 16, 14),
-    image:
-      "https://images.unsplash.com/photo-1674027444485-cec3da58eef4?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    type: "online",
-    category: "Technology",
-    distance: 10,
+    title: "INFORMS San Francisco Chapter In-Person Event",
+    category: "Health and Wellbeing (50 km)",
+    date: "THU, MAR 28 · 5:00 PM PDT",
+    going: "41 going",
+    price: "Free",
+    type: "In-person event",
+    image: "./assets/cards/event_placeholder.png",
+  },
+
+  {
+    title: "AI Wednesdays - Meet and Greet!",
+    category: "Technology (5 km)",
+    date: "WED, MAR 13 · 6:30 PM PDT",
+    going: "29 going",
+    price: "Free",
+    type: "In-person event",
+    image: "./assets/cards/event_placeholder.png",
   },
   {
-    title: "Dump writing group weekly meetup",
-    description: "Dump writing group",
-    date: new Date(2024, 2, 13, 11),
-    image:
-      "https://plus.unsplash.com/premium_photo-1678453146992-b80d66df9152?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    type: "online",
-    attendees: 77,
-    category: "Business",
-    distance: 100,
-  },
-  {
-    title: "Over 40s, 50s, & 60s Senior Singles Chat, Meet & Dating Community",
-    description: "Over 40s, 50s, 60s Singles Chat, Meet & Dating Community",
-    date: new Date(2024, 2, 14, 11),
-    image:
-      "https://plus.unsplash.com/premium_photo-1706005542509-a460d6efecb0?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    type: "online",
-    attendees: 140,
+    title: "ROS By-The-Bay March 2024",
     category: "Social Activities",
-    distance: 74,
+    date: "THU, MAR 21 · 6:00 PM PDT",
+    going: "51 going",
+    price: "Free",
+    type: "Online event",
+    image: "./assets/cards/event_placeholder.png",
   },
   {
-    title: "All Nations - Manhattan Missions Church Bible Study",
-    description: "Manhattan Bible Study Meetup Group",
-    date: new Date(2024, 2, 14, 11),
-    image:
-      "https://plus.unsplash.com/premium_photo-1679488248784-65a638a3d3fc?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    type: "offline",
-    category: "Health and Wellbeing",
-    distance: 15,
+    title: "Free Christian Singles' Dinner",
+    category: "Hobbies and Passions (10 km)",
+    date: "FRI, MAR 29 · 6:00 PM PDT",
+    going: "11 going",
+    price: "Free",
+    type: "In-person event",
+    image: "./assets/cards/event_placeholder.png",
+  },
+  {
+    title: "In-person: Deep Dive into RAG Architectures (Food served)",
+    category: "Hobbies and Passions (50 km)",
+    date: "THU, MAR 14 · 5:00 PM PDT",
+    going: "16 going",
+    price: "Free",
+    type: "In-person event",
+    image: "./assets/cards/event_placeholder.png",
   },
 ];
 
-const filters = [
+const onlineUpcoming = [
   {
-    type: "day",
-    options: [
-      "Any date",
-      new Date(2024, 2, 13, 11),
-      new Date(2024, 2, 14, 11),
-      new Date(2024, 2, 14, 20),
-      new Date(2024, 2, 16, 14),
-      new Date(2024, 2, 16, 14),
-      new Date(2024, 2, 23, 11, 30),
-      new Date(2024, 2, 23, 14),
-      new Date(2024, 2, 28, 20),
-      new Date(2024, 2, 30, 14),
-      new Date(2024, 3, 11, 20),
-      new Date(2024, 3, 25, 20),
-    ],
+    title: "Amazing On-Demand 15 Min Interviews with Top Coaches and Speakers",
+    category: "Business (25 km)",
+    date: "THU, MAR 14 · 6:00 PM PDT",
+    going: "3 going",
+    price: "Free",
+    type: "Online event",
+    image: "./assets/cards/event_placeholder.png",
   },
-  { type: "type", options: ["Any type", "offline", "online"] },
-  { type: "distance", options: ["Any distance", 25, 50, 75, 100] },
   {
-    type: "category",
-    options: [
-      "Any category",
-      "Health and Wellbeing",
-      "Social Activities",
-      "Business",
-      "Technology",
-    ],
+    title: "Vision Pro Developers Online Meetup",
+    category: "Technology",
+    date: "WED, MAR 13 · 7:00 PM PDT",
+    going: "51 going",
+    price: "Free",
+    type: "Online event",
+    image: "./assets/cards/event_placeholder.png",
+  },
+  {
+    title: "Significant Musical Moments",
+    category: "Hobbies and Passions",
+    date: "WED, MAR 13 · 6:00 PM PDT",
+    going: "16 going",
+    price: "Free",
+    type: "Online event",
+    image: "./assets/cards/event_placeholder.png",
+  },
+  {
+    title: "FREE Webinar: Introduction to Power BI",
+    category: "Technology",
+    date: "THU, MAR 14 · 5:30 PM PDT",
+    going: "33 going",
+    price: "Free",
+    type: "Online event",
+    image: "./assets/cards/event_placeholder.png",
   },
 ];
+
+function cardTemplate(e) {
+  return `
+    <article class="event-card event-card--grid">
+      <img class="event-card__img" src="${e.image}" alt="${e.title}">
+
+      <div class="event-card__content">
+        <h3 class="event-card__title">${e.title}</h3>
+
+        <div class="event-card__meta">${e.category}</div>
+
+        <div class="event-card__row">
+          <img class="event-card__icon" src="${icons.calendar}" alt="">
+          <span class="event-card__date">${e.date}</span>
+        </div>
+
+        <div class="event-card__row">
+          <img class="event-card__icon" src="${icons.check}" alt="">
+          <span class="event-card__text">${e.going}</span>
+
+          <img class="event-card__icon" src="${icons.vector}" alt="">
+          <span class="event-card__text">${e.price}</span>
+        </div>
+      </div>
+    </article>
+  `;
+}
+
+function renderGrid(id, list) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.innerHTML = list.map(cardTemplate).join("");
+}
+
+function render() {
+  renderGrid("eventsNearGrid", eventsNear);
+  renderGrid("onlineEventsGrid", onlineUpcoming);
+}
+
+document.addEventListener("DOMContentLoaded", render);

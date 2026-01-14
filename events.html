@@ -23,13 +23,14 @@
     <div class="container">
       <!-- -------Header------- -->
       <header>
-        <div class="headerFlex">
-          <div class="logo-btn">
-            <a href="/" class="logo">
-              <img src="./assets/logo/meetup_logo.svg" alt="Meetup logo" />
-            </a>
-          </div>
+        <!-- <div class="headerFlex"> -->
+        <div class="logo">
+          <a href="/">
+            <img src="./assets/logo/meetup_logo.svg" alt="Meetup logo" />
+          </a>
+        </div>
 
+        <div class="search-bar-container">
           <div class="search-bar">
             <input
               type="text"
@@ -48,10 +49,11 @@
             <span class="material-symbols-outlined"> search </span>
           </button>
         </div>
+        <!-- </div> -->
 
-        <div class="headerMenu">
+        <div id="headerMenu" class="headerMenu">
           <div class="choose-language-wrapper">
-            <div class="globe-icon">
+            <div class="c">
               <img src="./assets/icons/globe.svg" alt="Globe icon" />
             </div>
             <span class="language">English</span>
@@ -64,18 +66,99 @@
       </header>
 
       <!-- -------Main------- -->
-      <main></main>
+      <main class="eventsPage container">
+        <section class="eventsLeft">
+          <h1 class="eventsTitle">Events near New York, NY</h1>
+
+          <div class="eventsTabs">
+            <button class="tab tab--active" type="button">Events</button>
+          </div>
+
+          <section class="filters" aria-label="Filters">
+            <div class="filters__scroller">
+              <select id="filter-type" aria-label="Type">
+                <option value="any">Any type</option>
+                <option value="online">Online</option>
+                <option value="offline">Offline</option>
+              </select>
+
+              <select id="filter-distance" aria-label="Distance">
+                <option value="any">Any distance</option>
+                <option value="5">5 km</option>
+                <option value="10">10 km</option>
+                <option value="15">15 km</option>
+                <option value="25">25 km</option>
+                <option value="50">50 km</option>
+                <option value="75">75 km</option>
+                <option value="100">100 km</option>
+              </select>
+
+              <select id="filter-category" aria-label="Category">
+                <option value="any">Any category</option>
+                <option value="Social Activities">Social Activities</option>
+                <option value="Hobbies and Passions">
+                  Hobbies and Passions
+                </option>
+                <option value="Health and Wellbeing">
+                  Health and Wellbeing
+                </option>
+                <option value="Business">Business</option>
+                <option value="Technology">Technology</option>
+              </select>
+
+              <select id="filter-day" aria-label="Day">
+                <option value="any">Any day</option>
+              </select>
+            </div>
+            <div class="filters__track" aria-hidden="true"></div>
+          </section>
+
+          <section class="section">
+            <div class="eventsList" id="eventsGrid"></div>
+          </section>
+        </section>
+
+        <aside class="mapCard" aria-label="Map">
+          <div class="mapCard__head">
+            <div class="mapCard__title">
+              <div class="mapCard__small">Find events near</div>
+              <div class="mapCard__city">New York, NY</div>
+            </div>
+          </div>
+
+          <div class="mapCard__body">
+            <button class="mapCard__close" type="button" aria-label="Close map">
+              <img src="images/iu_icons/close.svg" alt="" />
+            </button>
+
+            <img
+              class="mapCard__img"
+              src="images/map/map-thumbnail.png"
+              alt="Map preview"
+            />
+
+            <a class="mapCard__btn" href="#" role="button">
+              Browse in map
+              <img
+                class="mapCard__btnIcon"
+                src="images/iu_icons/expandMapIcon.svg"
+                alt=""
+              />
+            </a>
+          </div>
+        </aside>
+      </main>
 
       <!-- -------footer------- -->
 
       <footer class="footer">
         <div class="footer-container">
-          <div class="container footer__cta">
+          <div class="container footer-cta">
             <span>Create your own Meetup group.</span>
             <button class="btn-outline" type="button">Get Started</button>
           </div>
 
-          <div class="container footer__cols">
+          <div class="container footer-cols">
             <div class="footerCol">
               <h4>Your Account</h4>
               <a href="#">Sign up</a>
@@ -106,10 +189,10 @@
             </div>
           </div>
 
-          <div class="container footer__bottomRow">
+          <div class="container footer-bottomRow">
             <div>
               <div class="footerSmallTitle">Follow us</div>
-              <div class="footer__socials">
+              <div class="footer-socials">
                 <img src="./assets/icons/facebook.svg" alt="" />
                 <img src="./assets/icons/twitter.svg" alt="" />
                 <img src="./assets/icons/youtube.svg" alt="" />
@@ -118,13 +201,13 @@
               </div>
             </div>
 
-            <div class="footer__apps">
+            <div class="footer-apps">
               <img src="./assets/logo/google_play.svg" alt="Google Play" />
               <img src="./assets/logo/app_store.svg" alt="App Store" />
             </div>
           </div>
 
-          <div class="container footer__legal">
+          <div class="container footer-legal">
             <span>© 2024 Meetup</span>
             <a href="#">Terms of Service</a>
             <a href="#">Privacy Policy</a>
