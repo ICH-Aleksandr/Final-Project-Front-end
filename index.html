@@ -23,13 +23,14 @@
     <div class="container">
       <!-- -------Header------- -->
       <header>
-        <div class="headerFlex">
-          <div class="logo-btn">
-            <a href="/" class="logo">
-              <img src="./assets/logo/meetup_logo.svg" alt="Meetup logo" />
-            </a>
-          </div>
+        <!-- <div class="headerFlex"> -->
+        <div class="logo">
+          <a href="/">
+            <img src="./assets/logo/meetup_logo.svg" alt="Meetup logo" />
+          </a>
+        </div>
 
+        <div class="search-bar-container">
           <div class="search-bar">
             <input
               type="text"
@@ -48,12 +49,19 @@
             <span class="material-symbols-outlined"> search </span>
           </button>
         </div>
+        <!-- </div> -->
 
-        <div class="headerMenu">
-          <span class="material-symbols-outlined"> language </span>
-          <a href="/">English</a>
-          <a href="/">Log in</a>
-          <input class="submit" type="submit" value="Sing up" />
+        <div id="headerMenu" class="headerMenu">
+          <div class="choose-language-wrapper">
+            <div class="c">
+              <img src="./assets/icons/globe.svg" alt="Globe icon" />
+            </div>
+            <span class="language">English</span>
+          </div>
+          <div class="login-signup">
+            <button class="button login-btn">Log in</button>
+            <button class="button signup-btn">Sign up</button>
+          </div>
         </div>
       </header>
 
@@ -65,10 +73,12 @@
             <h1>The people platform—Where interests become friendships</h1>
             <p>
               Whatever your interest, from hiking and reading to networking and
-              skill sharing, <br />there are thousands of people who share it on
-              Meetup. Events are happening <br />every day—sign up to join the
-              fun.
+              skill sharing, there are thousands of people who share it on
+              Meetup. Events are happening every day—sign up to join the fun.
             </p>
+            <div class="heading-img-adapt">
+              <img src="./assets/images/heading-img.png" alt="" />
+            </div>
             <div class="Join-Meetup-btn">
               <a href="./events.html">Join Meetup</a>
             </div>
@@ -144,6 +154,13 @@
           <div class="section join-meetup-inner">
             <div class="join-meetup-content">
               <h2>Join Meetup</h2>
+              <div class="join-meetup-image-adapt">
+                <img
+                  src="./assets/images/join-meetup.png"
+                  alt="Join Meetup illustration"
+                />
+              </div>
+
               <p class="join-meetup-text">
                 People use Meetup to meet new people, learn new things, find
                 support, get out of their comfort zones, and pursue their
@@ -154,7 +171,7 @@
             <div class="join-meetup-image">
               <img
                 src="./assets/images/join-meetup.png"
-                alt="People raising hands together"
+                alt="Join Meetup illustration"
               />
             </div>
           </div>
@@ -215,27 +232,24 @@
             </p>
             <div class="cities">
               <div class="city">
-                <img src="./assets/images/new_york.png" alt="" /><span
-                  >New York</span
-                >
+                <img src="./assets/images/new_york.png" alt="" />
+                <p>New York</p>
               </div>
               <div class="city">
-                <img src=".//assets/images/san-francisco.png" alt="" /><span
-                  >San Francisco</span
-                >
+                <img src=".//assets/images/san-francisco.png" alt="" />
+                <p>San Francisco</p>
               </div>
               <div class="city">
-                <img src="./assets/images/chicago.png" alt="" /><span
-                  >Chicago</span
-                >
+                <img src="./assets/images/chicago.png" alt="" />
+                <p>Chicago</p>
               </div>
               <div class="city">
-                <img src="./assets/images/nashville.png" alt="" /><span
-                  >Nashville</span
-                >
+                <img src="./assets/images/nashville.png" alt="" />
+                <p>Nashville</p>
               </div>
-              <div class="city">
-                <img src="./assets/images/miami.png" alt="" /><span>Miami</span>
+              <div class="city miami">
+                <img src="./assets/images/miami.png" alt="" />
+                <p>Miami</p>
               </div>
             </div>
           </div>
@@ -245,12 +259,12 @@
           <div class="section how-meetup-works">
             <h2>How Meetup works</h2>
             <div class="how">
-              <div class="howCard">
-                <div class="howIconWrap">
+              <div class="how-card">
+                <div class="how-icon">
                   <img src="./assets/icons/search_blue.svg" alt="" />
                 </div>
-                <div>
-                  <h3>Discover events and groups</h3>
+                <div class="how-content">
+                  <h4>Discover events and groups</h4>
                   <p>
                     See who's hosting local events for all the things you love
                   </p>
@@ -258,12 +272,12 @@
                 </div>
               </div>
 
-              <div class="howCard">
-                <div class="howIconWrap">
+              <div class="how-card">
+                <div class="how-icon">
                   <img src="./assets/icons/plus.svg" alt="" />
                 </div>
-                <div>
-                  <h3>Start a group to host events</h3>
+                <div class="how-content">
+                  <h4>Start a group to host events</h4>
                   <p>
                     Create your own Meetup group, and draw from a community of
                     millions
@@ -326,12 +340,12 @@
 
       <footer class="footer">
         <div class="footer-container">
-          <div class="container footer__cta">
+          <div class="container footer-cta">
             <span>Create your own Meetup group.</span>
             <button class="btn-outline" type="button">Get Started</button>
           </div>
 
-          <div class="container footer__cols">
+          <div class="container footer-cols">
             <div class="footerCol">
               <h4>Your Account</h4>
               <a href="#">Sign up</a>
@@ -362,10 +376,10 @@
             </div>
           </div>
 
-          <div class="container footer__bottomRow">
+          <div class="container footer-bottomRow">
             <div>
               <div class="footerSmallTitle">Follow us</div>
-              <div class="footer__socials">
+              <div class="footer-socials">
                 <img src="./assets/icons/facebook.svg" alt="" />
                 <img src="./assets/icons/twitter.svg" alt="" />
                 <img src="./assets/icons/youtube.svg" alt="" />
@@ -374,13 +388,13 @@
               </div>
             </div>
 
-            <div class="footer__apps">
+            <div class="footer-apps">
               <img src="./assets/logo/google_play.svg" alt="Google Play" />
               <img src="./assets/logo/app_store.svg" alt="App Store" />
             </div>
           </div>
 
-          <div class="container footer__legal">
+          <div class="container footer-legal">
             <span>© 2024 Meetup</span>
             <a href="#">Terms of Service</a>
             <a href="#">Privacy Policy</a>

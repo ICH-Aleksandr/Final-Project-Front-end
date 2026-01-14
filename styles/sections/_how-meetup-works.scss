@@ -5,7 +5,7 @@
   margin-top: 24px;
 }
 
-.howCard {
+.how-card {
   background: #eef6f7;
   border-radius: 16px;
   padding: 28px;
@@ -14,7 +14,7 @@
   align-items: flex-start;
 }
 
-.howIconWrap {
+.how-icon {
   width: 42px;
   height: 42px;
   border-radius: 12px;
@@ -25,34 +25,49 @@
   flex: 0 0 auto;
 }
 
-.howIconWrap img {
+.how-icon img {
   width: 41px;
   height: 41px;
 }
 
-.howCard {
+.how-card {
   align-items: flex-start;
 }
 
-.howCard h3,
-.howCard p,
-.howCard a {
-  max-width: 310px;
+.how-content {
+  max-width: 380px;
 }
-.howCard h3 {
+.how-card h4 {
   margin: 0 0 6px;
-  font-size: 16px;
+  font-size: 20px;
 }
 
-.howCard p {
+.how-card p {
   margin: 0 0 10px;
   color: #6b7280;
   line-height: 1.45;
   font-size: 14px;
 }
 
-.howCard a {
+.how-card a {
   color: #0f766e;
   font-weight: 500;
   font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .how {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .how h4 {
+    font-size: 12px;
+  }
+  .how p {
+    font-size: 10px;
+  }
+  .subtext {
+    display: none;
+  }
 }

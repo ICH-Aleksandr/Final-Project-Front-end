@@ -15,13 +15,8 @@
   gap: 16px;
 }
 
-.join-meetup-image {
-  flex-shrink: 0;
-}
-
-.join-meetup__image img {
+.join-meetup-image img {
   max-width: 340px;
-  height: auto;
   display: block;
 }
 
@@ -38,4 +33,31 @@
 
 .join-meet-up-btn:hover {
   background-color: #cf2253;
+}
+
+.join-meetup-image-adapt {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .join-meetup-image-adapt {
+    display: block;
+    margin: 0 auto;
+  }
+  .join-meetup-image {
+    display: none;
+  }
+  .join-meet-up-btn {
+    font-size: 16px;
+  }
+}
+@media (max-width: 480px) {
+  .join-meetup-image-adapt img {
+    width: 95%;
+  }
+}
+@media (max-width: 393px) {
+  .join-meetup-image-adapt img {
+    width: 80%;
+  }
 }

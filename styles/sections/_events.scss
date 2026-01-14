@@ -46,3 +46,20 @@
   color: #00798a;
   font-weight: 500;
 }
+
+@media (max-width: 768px) {
+  .EventsNear-heading-search-bar__right,
+  .OnlineEvents-heading-search-bar__right {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .EventsNear-location-input {
+    width: 128px;
+    font-size: 16px;
+  }
+  .EventsNear-heading-search-bar h2 {
+    width: 110px;
+  }
+}

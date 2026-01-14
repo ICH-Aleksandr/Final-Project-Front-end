@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Final-Project-Front-end</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- -------Header------- -->
+      <header>
+        <div class="headerFlex">
+          <div class="logo-btn">
+            <a href="/" class="logo">
+              <img src="./assets/logo/meetup_logo.svg" alt="Meetup logo" />
+            </a>
+          </div>
+
+          <div class="search-bar">
+            <input
+              type="text"
+              class="search-input"
+              name="search"
+              placeholder="Search events"
+            />
+            <input
+              type="text"
+              class="location-input"
+              name="city search"
+              value="Mountain View, CA"
+            />
+          </div>
+          <button class="search-button">
+            <span class="material-symbols-outlined"> search </span>
+          </button>
+        </div>
+
+        <div class="headerMenu">
+          <div class="choose-language-wrapper">
+            <div class="globe-icon">
+              <img src="./assets/icons/globe.svg" alt="Globe icon" />
+            </div>
+            <span class="language">English</span>
+          </div>
+          <div class="login-signup">
+            <button class="button login-btn">Log in</button>
+            <button class="button signup-btn">Sign up</button>
+          </div>
+        </div>
+      </header>
+
+      <!-- -------Main------- -->
+      <main></main>
+
+      <!-- -------footer------- -->
+
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="container footer__cta">
+            <span>Create your own Meetup group.</span>
+            <button class="btn-outline" type="button">Get Started</button>
+          </div>
+
+          <div class="container footer__cols">
+            <div class="footerCol">
+              <h4>Your Account</h4>
+              <a href="#">Sign up</a>
+              <a href="#">Log in</a>
+              <a href="#">Help</a>
+              <a href="#">Become an Affiliate</a>
+            </div>
+
+            <div class="footerCol">
+              <h4>Discover</h4>
+              <a href="#">Groups</a>
+              <a href="#">Calendar</a>
+              <a href="#">Topics</a>
+              <a href="#">Cities</a>
+              <a href="#">Online Events</a>
+              <a href="#">Local Guides</a>
+              <a href="#">Make Friends</a>
+            </div>
+
+            <div class="footerCol">
+              <h4>Meetup</h4>
+              <a href="#">About</a>
+              <a href="#">Blog</a>
+              <a href="#">Meetup Pro</a>
+              <a href="#">Careers</a>
+              <a href="#">Apps</a>
+              <a href="#">Podcast</a>
+            </div>
+          </div>
+
+          <div class="container footer__bottomRow">
+            <div>
+              <div class="footerSmallTitle">Follow us</div>
+              <div class="footer__socials">
+                <img src="./assets/icons/facebook.svg" alt="" />
+                <img src="./assets/icons/twitter.svg" alt="" />
+                <img src="./assets/icons/youtube.svg" alt="" />
+                <img src="./assets/icons/instagram.svg" alt="" />
+                <img src="./assets/icons/tiktok.svg" alt="" />
+              </div>
+            </div>
+
+            <div class="footer__apps">
+              <img src="./assets/logo/google_play.svg" alt="Google Play" />
+              <img src="./assets/logo/app_store.svg" alt="App Store" />
+            </div>
+          </div>
+
+          <div class="container footer__legal">
+            <span>© 2024 Meetup</span>
+            <a href="#">Terms of Service</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Do Not Sell or Share My Personal Data</a>
+            <a href="#">Cookie Policy</a>
+            <a href="#">Help</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+  <script src="./scripts/script.js"></script>
+</html>

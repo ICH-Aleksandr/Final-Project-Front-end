@@ -1,5 +1,11 @@
 /***** -- Main -- *****/
 main {
   max-width: 1196px;
-  margin: 0px auto;
+  margin: 0 auto;
+}
+
+@media (max-width: 393px) {
+  main {
+    padding: 12px;
+  }
 }

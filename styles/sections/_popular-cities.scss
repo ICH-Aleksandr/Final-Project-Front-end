@@ -22,6 +22,39 @@
   border-radius: 999px;
   object-fit: cover;
 }
-.city span {
+.city p {
   font-weight: 500;
+}
+
+@media (max-width: 1280px) {
+  .cities {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .miami {
+    display: none;
+  }
+}
+
+@media (max-width: 960px) {
+  .cities {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .city img {
+    width: 180px;
+    height: 180px;
+  }
+}
+@media (max-width: 480px) {
+  .city img {
+    width: 153px;
+    height: 153px;
+  }
+}
+@media (max-width: 393px) {
+  .cities {
+    gap: 10px;
+  }
 }

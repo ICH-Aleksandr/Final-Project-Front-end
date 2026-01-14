@@ -21,14 +21,14 @@
 
 .post h3 {
   margin: 10px 0 6px;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.25;
 }
 
 .post p {
   margin: 0 0 10px;
   color: #6b7280;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5;
 }
 
@@ -39,4 +39,21 @@
 }
 .post a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .posts {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .post h3 {
+    font-size: 16px;
+  }
+  .post p {
+    font-size: 12px;
+  }
+  .subtext {
+    display: none;
+  }
 }

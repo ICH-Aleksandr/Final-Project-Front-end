@@ -1,25 +1,35 @@
 /***** -- Header -- *****/
 header {
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
   padding: 16px 24px;
   height: 64px;
+  position: relative;
 }
 
 /* ------headerFlex-------- */
-.headerFlex {
-  display: flex;
-  align-items: center;
-  width: 750px;
+// .headerFlex {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   max-width: 750px;
+// }
+
+.logo {
+  margin-right: 40px;
+}
+.logo img {
+  height: 34px;
 }
 
-.logo-btn {
-  margin-right: 40px;
+.search-bar-container {
+  display: flex;
 }
 
 .search-bar {
   display: flex;
   align-items: center;
+  max-width: 592px;
   height: 42px;
   border: 1px solid #ddd;
   border-radius: 0.4rem 0 0 0.4rem;
@@ -75,20 +85,106 @@ header {
 
 /* ------headerMenu-------- */
 .headerMenu {
-  font-size: medium;
+  margin-left: auto;
+  font-size: 16px;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 1.5rem;
 }
-.headerMenu > a {
-  text-decoration: none;
-  color: black;
+
+.choose-language-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
 }
-.headerMenu > input {
-  color: white;
-  background-color: rgba(0, 121, 138, 1);
+
+.globe-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  padding: 8px 16px;
+  cursor: pointer;
   border-radius: 8px;
-  width: 83px;
-  height: 36px;
-  border: none;
+  border: 1px solid transparent;
+}
+
+.login-btn {
+  background-color: transparent;
+  padding-left: 0px;
+}
+
+.login-btn:hover {
+  background-color: #dff9f9;
+}
+
+.signup-btn {
+  background-color: #02798a;
+  color: #fff;
+}
+
+.signup-btn:hover {
+  background-color: #025865;
+}
+
+@media (max-width: 1024px) {
+  .location-input {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .search-bar-container {
+    position: absolute;
+    top: 100%;
+    margin: 8px auto;
+    left: 24px;
+    right: 24px;
+    width: auto;
+  }
+  .headerMenu {
+    font-size: 12px;
+  }
+  .logo {
+    margin-right: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-btn {
+    max-width: 100px;
+    flex-shrink: 1;
+  }
+
+  .logo img {
+    width: 100%;
+    height: auto;
+  }
+
+  .headerMenu {
+    gap: 0.5rem;
+    flex-shrink: 0;
+  }
+
+  .search-input,
+  .location-input {
+    font-size: 12px;
+  }
+
+  .button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .choose-language-wrapper {
+    font-size: 12px;
+  }
+
+  .login-signup .login-btn {
+    padding: 6px 0px;
+    margin-right: 0.5rem;
+  }
 }

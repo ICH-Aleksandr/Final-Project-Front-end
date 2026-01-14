@@ -1,4 +1,3 @@
-/* ------heading-------- */
 .heading {
   display: flex;
   flex-direction: row;
@@ -11,8 +10,6 @@
   flex-grow: 1;
 }
 h1 {
-  font-size: 42px;
-  font-weight: 700;
   margin-bottom: 24px;
   line-height: 52px;
 }
@@ -27,6 +24,10 @@ h1 {
   height: 40px;
   cursor: pointer;
 }
+.Join-Meetup-btn:hover {
+  background-color: #025865;
+}
+
 .Join-Meetup-btn a {
   display: flex;
   justify-content: center;
@@ -43,4 +44,33 @@ h1 {
 .heading-img img {
   display: block;
   margin: 0 auto;
+}
+
+.heading-img-adapt {
+  display: none;
+}
+
+.heading-img-adapt img {
+  display: block;
+  margin: 0 auto 16px;
+  width: 70%;
+}
+
+@media (max-width: 768px) {
+  .heading-img-adapt {
+    display: block;
+  }
+  .heading-img {
+    display: none;
+  }
+  .Join-Meetup-btn {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .Join-Meetup-btn {
+    width: 100px;
+    height: 32px;
+  }
 }
