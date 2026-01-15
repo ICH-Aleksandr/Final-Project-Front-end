@@ -46,6 +46,7 @@
     grid-template-columns: 1fr;
   }
 }
+
 @media (max-width: 480px) {
   .post h3 {
     font-size: 16px;
@@ -55,5 +56,8 @@
   }
   .subtext {
     display: none;
+  }
+  .friendships-made h2 {
+    margin-bottom: 8px;
   }
 }

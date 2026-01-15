@@ -6,9 +6,14 @@
   font-size: 16px;
 }
 
+html {
+  background-color: #f5f5f5;
+}
+
 body {
   max-width: 1512px;
   margin: 0 auto;
+  background-color: white;
 }
 
 a {
@@ -26,7 +31,7 @@ h2 {
 }
 
 .section {
-  padding: 56px 0;
+  padding: 30px 0;
 }
 
 @media (max-width: 480px) {
@@ -39,8 +44,10 @@ h2 {
   h2 {
     font-size: 20px;
   }
+  .section {
+    padding: 15px 0;
+  }
 }
-/***** -- Footer -- *****/
 .footer-container {
   max-width: 1196px;
   margin: 0 auto;
@@ -48,7 +55,7 @@ h2 {
 }
 
 .footer {
-  margin-top: 28px;
+  margin-top: 20px;
   background: #07080b;
   color: #e5e7eb;
 }
@@ -188,7 +195,6 @@ h2 {
     display: none;
   }
 }
-/***** -- Header -- *****/
 header {
   display: flex;
   padding: 16px 24px;
@@ -196,7 +202,6 @@ header {
   position: relative;
 }
 
-/* ------headerFlex-------- */
 .logo {
   margin-right: 40px;
 }
@@ -266,7 +271,6 @@ header {
   font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 24;
 }
 
-/* ------headerMenu-------- */
 .headerMenu {
   margin-left: auto;
   font-size: 16px;
@@ -363,7 +367,6 @@ header {
     margin-right: 0.5rem;
   }
 }
-/***** -- Main -- *****/
 main {
   max-width: 1196px;
   margin: 0 auto;
@@ -450,7 +453,6 @@ h1 {
     height: 32px;
   }
 }
-/* -------Events Section------- */
 .EventsNear-header,
 .OnlineEvents-header {
   display: flex;
@@ -505,7 +507,6 @@ h1 {
   font-weight: 500;
 }
 
-/* ------------------------------------- */
 .events-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -592,9 +593,9 @@ h1 {
   display: grid;
   grid-template-columns: 180px 1fr;
   gap: 16px;
-  padding: 10px 0 50px;
-  border-bottom: 1px solid #e5e7eb;
-  margin-bottom: 24px;
+  padding-top: 10px;
+  border-top: 1px solid #e5e7eb;
+  margin-bottom: 40px;
 }
 
 .event-card--list .event-card__img {
@@ -605,7 +606,6 @@ h1 {
      object-fit: cover;
 }
 
-/* ------------------------------------- */
 @media (max-width: 1024px) {
   .events-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -642,9 +642,9 @@ h1 {
     flex-direction: row;
     align-items: flex-start;
     gap: 12px;
-    padding-bottom: 14px;
+    padding-top: 14px;
     margin-bottom: 14px;
-    border-bottom: 1px solid #e5e7eb;
+    border-top: 1px solid #e5e7eb;
   }
   .events-grid .event-card--grid:first-child {
     border-top: 1px solid #e5e7eb;
@@ -987,6 +987,9 @@ h1 {
   .subtext {
     display: none;
   }
+  .friendships-made h2 {
+    margin-bottom: 8px;
+  }
 }
 .eventsPage {
   padding: 75px 12px 24px;
@@ -1049,8 +1052,8 @@ h1 {
 .filters__scroller {
   display: flex;
   gap: 12px;
-  flex-wrap: wrap;
-  min-width: 0;
+  flex-wrap: nowrap;
+  overflow: auto;
   max-width: 100%;
 }
 
@@ -1077,25 +1080,8 @@ h1 {
   background-color: #e5e7eb;
 }
 
-.filters__track {
-  display: none;
-  height: 6px;
-  border-radius: 999px;
-  background: #d1d5db;
-  margin-top: 10px;
-  position: relative;
-  overflow: hidden;
-}
-
-.filters__track::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: var(--thumb-left, 0px);
-  width: var(--thumb-width, 40px);
-  height: 100%;
-  border-radius: 999px;
-  background: #9ca3af;
+.filters__scroller select:focus {
+  outline: none;
 }
 
 .eventsList-section {

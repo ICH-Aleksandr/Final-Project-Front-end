@@ -51,11 +51,13 @@
     font-size: 16px;
   }
 }
+
 @media (max-width: 480px) {
   .join-meetup-image-adapt img {
     width: 95%;
   }
 }
+
 @media (max-width: 393px) {
   .join-meetup-image-adapt img {
     width: 80%;

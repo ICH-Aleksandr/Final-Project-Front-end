@@ -15,6 +15,7 @@
 .city {
   text-align: center;
 }
+
 .city img {
   width: 205px;
   height: 205px;
@@ -22,6 +23,7 @@
   border-radius: 999px;
   object-fit: cover;
 }
+
 .city p {
   font-weight: 500;
 }
@@ -47,12 +49,14 @@
     height: 180px;
   }
 }
+
 @media (max-width: 480px) {
   .city img {
     width: 153px;
     height: 153px;
   }
 }
+
 @media (max-width: 393px) {
   .cities {
     gap: 10px;

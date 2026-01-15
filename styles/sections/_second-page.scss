@@ -5,6 +5,7 @@
   gap: 34px;
   align-items: start;
 }
+
 .event-card__date {
   font-size: 14px;
   font-weight: 500;
@@ -12,6 +13,7 @@
   text-transform: uppercase;
   margin-bottom: 2px;
 }
+
 .eventsLeft {
   min-width: 0;
 }
@@ -57,8 +59,8 @@
 .filters__scroller {
   display: flex;
   gap: 12px;
-  flex-wrap: wrap;
-  min-width: 0;
+  flex-wrap: nowrap;
+  overflow: auto;
   max-width: 100%;
 }
 
@@ -87,26 +89,8 @@
 .filters__scroller select:hover {
   background-color: #e5e7eb;
 }
-
-.filters__track {
-  display: none;
-  height: 6px;
-  border-radius: 999px;
-  background: #d1d5db;
-  margin-top: 10px;
-  position: relative;
-  overflow: hidden;
-}
-
-.filters__track::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: var(--thumb-left, 0px);
-  width: var(--thumb-width, 40px);
-  height: 100%;
-  border-radius: 999px;
-  background: #9ca3af;
+.filters__scroller select:focus {
+  outline: none;
 }
 
 .eventsList-section {

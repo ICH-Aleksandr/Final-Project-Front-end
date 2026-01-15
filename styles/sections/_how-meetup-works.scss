@@ -37,6 +37,7 @@
 .how-content {
   max-width: 380px;
 }
+
 .how-card h4 {
   margin: 0 0 6px;
   font-size: 20px;
@@ -60,6 +61,7 @@
     grid-template-columns: 1fr;
   }
 }
+
 @media (max-width: 480px) {
   .how h4 {
     font-size: 12px;
