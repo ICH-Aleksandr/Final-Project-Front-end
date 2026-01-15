@@ -67,7 +67,6 @@ const eventsStore = [
 ];
 
 const gridEl = document.getElementById("eventsGrid");
-const dayEl = document.getElementById("filter-day");
 const typeEl = document.getElementById("filter-type");
 const distanceEl = document.getElementById("filter-distance");
 const categoryEl = document.getElementById("filter-category");
@@ -78,10 +77,6 @@ function safeText(v) {
 
 function pad2(n) {
   return String(n).padStart(2, "0");
-}
-
-function dateKey(dateObj) {
-  return dateObj.getTime();
 }
 
 function formatFigmaDate(dateObj) {
@@ -154,35 +149,12 @@ function renderEvents(list) {
   gridEl.innerHTML = list.map(createCard).join("");
 }
 
-function buildDayOptions() {
-  if (!dayEl) return;
-
-  dayEl
-    .querySelectorAll('option:not([value="any"])')
-    .forEach((o) => o.remove());
-
-  const uniqueDates = Array.from(
-    new Map(eventsStore.map((e) => [dateKey(e.date), e.date])).values()
-  ).sort((a, b) => a.getTime() - b.getTime());
-
-  uniqueDates.forEach((dt) => {
-    const opt = document.createElement("option");
-    opt.value = String(dt.getTime());
-    opt.textContent = formatFigmaDate(dt);
-    dayEl.appendChild(opt);
-  });
-}
-
 function applyFilters() {
-  const dayValue = dayEl?.value ?? "any";
   const typeValue = typeEl?.value ?? "any";
   const distValue = distanceEl?.value ?? "any";
   const catValue = categoryEl?.value ?? "any";
 
   const filtered = eventsStore.filter((ev) => {
-    if (dayValue !== "any" && String(ev.date.getTime()) !== dayValue)
-      return false;
-
     if (typeValue !== "any" && ev.type !== typeValue) return false;
 
     if (distValue !== "any") {
@@ -201,10 +173,9 @@ function applyFilters() {
 }
 
 function init() {
-  buildDayOptions();
   renderEvents(eventsStore);
 
-  [dayEl, typeEl, distanceEl, categoryEl].forEach((sel) => {
+  [typeEl, distanceEl, categoryEl].forEach((sel) => {
     if (!sel) return;
     sel.addEventListener("change", applyFilters);
   });

@@ -1,0 +1,237 @@
+.eventsPage {
+  padding: 75px 12px 24px;
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 34px;
+  align-items: start;
+}
+.event-card__date {
+  font-size: 14px;
+  font-weight: 500;
+  color: #7c6f50;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+.eventsLeft {
+  min-width: 0;
+}
+
+.eventsTitle {
+  margin: 0 0 10px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.eventsTabs {
+  margin: 0 0 14px;
+}
+
+.tab {
+  border: 0;
+  background: transparent;
+  font-weight: 500;
+  font-size: 20px;
+  color: #006a78;
+  padding: 8px 0;
+  cursor: default;
+}
+
+.tab--active {
+  position: relative;
+}
+
+.tab--active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 63px;
+  height: 4px;
+  background: #00798a;
+}
+
+.filters {
+  padding: 10px 0 18px;
+}
+
+.filters__scroller {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.filters__scroller select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  cursor: pointer;
+  background: #f6f7f8;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+
+  padding: 10px 44px 10px 14px;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #111827;
+  font-weight: 500;
+
+  background-image: url("../assets/icons/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 14px 14px;
+}
+
+.filters__scroller select:hover {
+  background-color: #e5e7eb;
+}
+
+.filters__track {
+  display: none;
+  height: 6px;
+  border-radius: 999px;
+  background: #d1d5db;
+  margin-top: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.filters__track::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: var(--thumb-left, 0px);
+  width: var(--thumb-width, 40px);
+  height: 100%;
+  border-radius: 999px;
+  background: #9ca3af;
+}
+
+.eventsList-section {
+  max-width: 604px;
+}
+
+.mapCard {
+  position: sticky;
+  top: 90px;
+  border-radius: 16px;
+}
+
+.mapCard__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.mapCard__small {
+  font-size: 12px;
+  color: #212121;
+  font-weight: 500;
+}
+
+.mapCard__city {
+  font-size: 20px;
+  font-weight: 700;
+  color: #212121;
+}
+
+.mapCard__body {
+  width: min(350px, 100%);
+  height: 285px;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.mapCard__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(1px);
+  transform: scale(1.02);
+}
+
+.mapCard__close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #fff;
+  border: none;
+  border-radius: 6%;
+  cursor: pointer;
+}
+
+.mapCard__close img {
+  width: 15px;
+  height: 15px;
+}
+
+.mapCard__btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 8px 16px;
+  background: #fff;
+  color: #0f766e;
+
+  border: 2px solid #0f766e;
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.mapCard__btnIcon {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .mapCard {
+    display: none;
+  }
+  .eventsPage {
+    grid-template-columns: 1fr;
+  }
+  .eventsList-section {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .event-card--list {
+    grid-template-columns: 95px 1fr;
+    gap: 12px;
+  }
+
+  .event-card--list .event-card__img {
+    width: 95px;
+    height: 64px;
+    border-radius: 8px;
+  }
+
+  .event-card--grid .event-card__date,
+  .event-card__meta {
+    font-size: 10px;
+  }
+}
